@@ -89,7 +89,7 @@ public class InfiniteCarousel: UICollectionView, UICollectionViewDataSource, UIC
         }
         set {
             rootDelegate = newValue as? UICollectionViewDelegateFlowLayout
-            super.delegate = self
+            super.delegate = newValue != nil ? self : nil
         }
     }
 
